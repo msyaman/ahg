@@ -31,13 +31,15 @@ function updateTime() {
 setInterval(updateTime, 100);
 
 // SLAYT GEÇİŞİ
+changeBackground(); // İlk görseli hemen göster
 const slideshow = document.querySelector(".slideshow");
 const imageCount = 10;
 let currentImage = 1;
 
 function changeBackground() {
-  currentImage = (currentImage % imageCount) + 1;
   slideshow.style.backgroundImage = `url('img/${currentImage}.jpg')`;
+  currentImage = (currentImage % imageCount) + 1;
 }
 
-setInterval(changeBackground, 5000); // Her 5 saniyede bir değiştir
+changeBackground(); // ilk görseli hemen yükle
+setInterval(changeBackground, 5000); // sonra 5 saniyede bir değiştir
