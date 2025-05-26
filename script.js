@@ -1,3 +1,4 @@
+
 const startDate = new Date("2023-01-26T08:00:00");
 
 function updateTime() {
@@ -22,9 +23,21 @@ function updateTime() {
   const months = diff % 12;
   const years = Math.floor(diff / 12);
 
-  document.getElementById("time").innerText = 
+  document.getElementById("time").innerText =
     `${years} yıl ${months} ay ${days} gün ` +
     `${hours} saat ${minutes} dakika ${seconds} saniye ${ms} milisaniye`;
 }
 
 setInterval(updateTime, 100);
+
+// SLAYT GEÇİŞİ
+const slideshow = document.querySelector(".slideshow");
+const imageCount = 10;
+let currentImage = 1;
+
+function changeBackground() {
+  currentImage = (currentImage % imageCount) + 1;
+  slideshow.style.backgroundImage = `url('img/${currentImage}.jpg')`;
+}
+
+setInterval(changeBackground, 5000); // Her 5 saniyede bir değiştir
