@@ -17,7 +17,7 @@ body, html {
   background-size: cover;
   background-position: center;
   animation: slideshow 100s infinite;
-  filter: brightness(0.4);
+  /* filter: brightness(0.4); */ /* kaldırıldı */
 }
 
 @keyframes slideshow {
@@ -40,7 +40,7 @@ body, html {
   left: 0;
   padding: 40px;
   color: #f8f8f8;
-  background: rgba(30, 30, 30, 0.6);
+  background: transparent;
   width: 100%;
   height: 100%;
   display: flex;
@@ -53,14 +53,16 @@ body, html {
 h1 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #ccc;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
 
 #time {
   font-size: 1.5rem;
   color: #ffffff;
-  background-color: rgba(50, 50, 50, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 15px 25px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
